@@ -33,6 +33,11 @@
       .text-giant {
         font-size: 40px;
       }
+
+      input[type="range"] {
+        outline: none !important;
+        border: none;
+      }
     </style>
   </head>
   <body>
@@ -46,8 +51,19 @@
         </div>
 
         <div class="form-group">
-          <label for="quantity">Quantity</label>
-          <input type="number" class="form-control" name="quantity" value="1" />
+          <label for="quantity"
+            >Quantity
+            <span class="badge rounded-pill bg-primary text-light">1</span>
+          </label>
+          <input
+            type="range"
+            class="form-control range"
+            name="quantity"
+            value="1"
+            min="1"
+            max="10"
+            step="1"
+          />
         </div>
       </form>
 
